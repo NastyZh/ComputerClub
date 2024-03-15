@@ -25,7 +25,7 @@ public class ConsoleUserInterface:IUserInterface
         var input= Console.ReadLine();
         if (int.TryParse(input,out var computerNumber) && computerNumber>=1 && computerNumber<=computersCount)
         {
-            return computersCount-1;
+            return computerNumber-1;
         }
 
         return -1;
@@ -43,7 +43,7 @@ public class ConsoleUserInterface:IUserInterface
 
     public void ShowClientServed(int computerNumber)
     {
-        Console.WriteLine($"Клиент забронировал компьютр {computerNumber}");
+        Console.WriteLine($"Клиент забронировал компьютр {computerNumber+1}");
     }
 
     public void ShowClientNotServed()
